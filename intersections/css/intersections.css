@@ -1,0 +1,20 @@
+
+
+
+.navbar-wrapper {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-color: #595959;
+  margin-top: 0px;
+  padding-top: 20px;
+}
+
+.plot {
+}
+
+.plot h1 {
+  text-align: center;
+}
+
