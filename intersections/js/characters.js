@@ -1,5 +1,6 @@
 var characters = [
   {
+    img: "elaine.png",
     name: "Elaine",
     real_name: "Erica Cresswell",
     home: "Coventry Gardens (33 mi)",
@@ -24,6 +25,7 @@ var characters = [
     ]
   },
   {
+    img: "freddy.png",
     name: "Homeless Freddy",
     real_name: "William Jenkins",
     home: "Carter's Alley behind Carter's gas station (100 ft)",
@@ -102,6 +104,7 @@ var characters = [
     ],
   },
   {
+    img: "connor.png",
     name: "Connor",
     real_name: "Connor",
     home: "Morningwood (2.6mi)",
@@ -112,6 +115,7 @@ var characters = [
     ]
   },
   {
+    img: "gina.png",
     name: "Gina",
     real_name: "Gina",
     home: "South Shores (26 mi)",
@@ -150,7 +154,12 @@ $(document).ready(function() {
     var character = characters[c];
     console.log("Character: ", character);
     cdiv.append($("<hr class='featurette-divider'>"));
-    var img = $("<img class=\"featurette-image img-responsive\" data-src=\"holder.js/500x500/auto\" alt=\"Generic placeholder image\">");
+    var img;
+    if (character.img != null) {
+      img = $("<img class=\"featurette-image img-responsive\" src=\"images/" + character.img + "\" alt=\"" + character.name + "\">");
+    } else {
+      img = $("<img class=\"featurette-image img-responsive\" data-src=\"holder.js/500x500/auto\" alt=\"Generic placeholder image\">");
+    }
     var bio = $("<div class='bio'>");
     var info = $("<dl class='dl-horizontal'>");
     profileTerm(character, info, 'real_name', 'Name');
